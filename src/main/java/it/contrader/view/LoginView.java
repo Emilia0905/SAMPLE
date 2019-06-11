@@ -14,7 +14,6 @@ public class LoginView extends AbstractView {
 	public void showResults(Request request) {
 
 	}
-
 	public void showOptions() {
 		
 		System.out.println("----- .:LOGIN:. ----");
