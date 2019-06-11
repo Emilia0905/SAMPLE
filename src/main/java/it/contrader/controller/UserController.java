@@ -70,7 +70,6 @@ public class UserController implements Controller {
 			break;
 			
 		case "USERLIST":
-			//MainDispatcher.getInstance().callView("User", null);
 			List<User> users = userService.getAll();
 			request.put("users", users);
 			MainDispatcher.getInstance().callView("User", request);

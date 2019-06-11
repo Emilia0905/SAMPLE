@@ -7,6 +7,9 @@ public class LoginController implements Controller {
 	}
 
 	public void doControl (Request request) {
+		/**
+		 * Attraverso il Dispatcher va alla pagina di autenticazione
+		 */
 		MainDispatcher.getInstance().callView("Login", request);
 	}
 

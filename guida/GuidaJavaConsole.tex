@@ -201,7 +201,6 @@
 			I campi contrassegnati dal modificatore di accesso \texttt{private} sono i cosiddetti \textit{attributi} dell'entità. Avendo noi a che fare con un'entità di tipo User, avremo uno username, una password e un tipo di utente. Aggiungiamo inoltre un'id da usare come chiave privata sul database.\\
 			
 			\begin{lstlisting}
-				package it.contrader.model;
 			
 				public class User {
 				
@@ -310,11 +309,138 @@
 	
 	\section{DAO}
 	
+	\begin{lstlisting}
+	public class LoginDAO {
+		
+		private final String QUERY_LOGIN = "SELECT * FROM user 
+										WHERE username = ? AND password = ?";
+		
+		public String login (String username, String password) {
+		
+		Connection connection = ConnectionSingleton.getInstance();
+			
+			try {
+				PreparedStatement statement = connection
+								.prepareStatement(QUERY_LOGIN);
+			
+					statement.setString(1, username);
+					statement.setString(2, password);
+						
+					String usertype = null;
+						
+					ResultSet resultSet;
+					
+				if(statement.executeQuery().next()) {
+					resultSet = statement.executeQuery();
+					resultSet.next();
+					usertype = resultSet.getString("usertype");
+				}
+		
+					return usertype;
+			}
+		
+			catch (SQLException e) {
+				return null;
+			}
+		}
+	}
+	\end{lstlisting}
+	
 	\section{Service}
+	
+	\begin{lstlisting}
+	public class LoginService {
+	
+		private LoginDAO loginDAO;
+
+		public LoginService() {
+			this.loginDAO = new LoginDAO();
+		}
+	
+		public String login (String username, String password) {
+			return this.loginDAO.login(username, password);
+		}
+	}
+	
+	\end{lstlisting}
 	
 	\section{Controller}
 	
+	\begin{lstlisting}
+		public class HomeController implements Controller {
+		
+			private LoginService loginService;
+	
+			public HomeController() {
+			loginService = new LoginService();
+			}
+			
+			public void doControl(Request request) {
+				if (request != null) {
+			
+				String username = request.get("username").toString();
+				String password = request.get("password").toString();
+				
+				String usertype= loginService.login(username, password);
+				
+					switch(usertype) {
+				
+					case "ADMIN":
+						MainDispatcher.getInstance().callView("HomeAdmin", request);
+						break;
+				
+					case "USER": 
+						MainDispatcher.getInstance().callView("HomeUser", request);
+						break;
+				
+					default:
+						MainDispatcher.getInstance().callView("Login", null);
+						break;
+					}
+				}
+				else MainDispatcher.getInstance().callView("Login", null);
+			}
+		}
+	
+	\end{lstlisting}
 	\section{View}
+	
+	\begin{lstlisting}
+	public class LoginView extends AbstractView {
+	
+		private String username;
+		
+		private String password;
+		
+		public void showResults(Request request) {
+		
+		}
+
+		public void showOptions() {
+		
+			System.out.println("----- .:LOGIN:. ----");
+			
+			System.out.println(" Nome utente:");
+			this.username = getInput();
+			
+			System.out.println(" Password:");
+			this.password = getInput();
+		}
+		
+		public void submit() {
+			
+			Request request = new Request();
+			
+			request.put("username", username);
+			request.put("password", password);
+			
+			MainDispatcher.getInstance().callAction("Home", "doControl", request);
+		}
+	
+	
+	}
+	
+	\end{lstlisting}
 	
 	\section{Pattern Singleton}
 	

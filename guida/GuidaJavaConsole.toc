@@ -13,8 +13,8 @@
 \contentsline {subsection}{\numberline {5.2}Costruttore}{10}{subsection.5.2}
 \contentsline {subsection}{\numberline {5.3}Getter e Setter}{10}{subsection.5.3}
 \contentsline {subsection}{\numberline {5.4}ToString e Equals}{11}{subsection.5.4}
-\contentsline {section}{\numberline {6}DAO}{13}{section.6}
+\contentsline {section}{\numberline {6}DAO}{12}{section.6}
 \contentsline {section}{\numberline {7}Service}{13}{section.7}
-\contentsline {section}{\numberline {8}Controller}{13}{section.8}
-\contentsline {section}{\numberline {9}View}{13}{section.9}
-\contentsline {section}{\numberline {10}Pattern Singleton}{13}{section.10}
+\contentsline {section}{\numberline {8}Controller}{14}{section.8}
+\contentsline {section}{\numberline {9}View}{15}{section.9}
+\contentsline {section}{\numberline {10}Pattern Singleton}{16}{section.10}
