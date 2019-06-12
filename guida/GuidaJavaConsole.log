@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.14)  12 JUN 2019 20:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.14)  13 JUN 2019 00:50
 entering extended mode
 **./GuidaJavaConsole.tex
 (GuidaJavaConsole.tex
@@ -823,7 +823,7 @@ LaTeX Info: Redefining \nameref on input line 49.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<Logo.png, id=87, 963.6pt x 360.34625pt>
+<Logo.png, id=111, 963.6pt x 360.34625pt>
 File: Logo.png Graphic file (type png)
  <use Logo.png>
 Package pdftex.def Info: Logo.png used on input line 52.
@@ -913,6 +913,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 111--112
  []
 
 [6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 176--177
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 178--179
 
  []
@@ -923,118 +928,131 @@ Underfull \hbox (badness 10000) in paragraph at lines 180--181
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 182--183
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 185--187
+Underfull \hbox (badness 10000) in paragraph at lines 183--185
 
  []
 
 [8]
+Underfull \hbox (badness 10000) in paragraph at lines 186--187
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 188--189
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 190--191
-
- []
-
-<mvc.png, id=208, 803.0pt x 883.3pt>
+<mvc.png, id=238, 803.0pt x 883.3pt>
 File: mvc.png Graphic file (type png)
  <use mvc.png>
-Package pdftex.def Info: mvc.png used on input line 194.
+Package pdftex.def Info: mvc.png used on input line 192.
 (pdftex.def)             Requested size: 206.92491pt x 227.62204pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--203
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
 
  []
 
 [9 <./mvc.png>]
-Overfull \hbox (61.2751pt too wide) in paragraph at lines 224--225
+Overfull \hbox (61.2751pt too wide) in paragraph at lines 220--221
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[10] [11]
-Overfull \hbox (73.92206pt too wide) in paragraph at lines 276--277
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][] 
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 266--267
+
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 312--314
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 309--311
 
  []
 
 [12]
-Overfull \hbox (4.14804pt too wide) in paragraph at lines 327--329
+Overfull \hbox (4.14804pt too wide) in paragraph at lines 324--326
 \T1/lmr/m/n/12 to-do \T1/lmtt/m/n/12 getIstance() \T1/lmr/m/n/12 ). Suc-ces-si-
 va-men-te, tra-mi-te il me-to-do \T1/lmtt/m/n/12 prepareStatement
  []
 
 [13] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 370--371
+Underfull \hbox (badness 10000) in paragraph at lines 367--368
+
+ []
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 389.
+
+Underfull \hbox (badness 10000) in paragraph at lines 389--390
 
  []
 
 [15
 
-]
-Overfull \hbox (48.05292pt too wide) in paragraph at lines 416--417
+] [16]
+Overfull \hbox (48.05292pt too wide) in paragraph at lines 423--424
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (42.30418pt too wide) in paragraph at lines 420--421
+Overfull \hbox (42.30418pt too wide) in paragraph at lines 427--428
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (7.81178pt too wide) in paragraph at lines 424--425
+Overfull \hbox (7.81178pt too wide) in paragraph at lines 431--432
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (5.51248pt too wide) in paragraph at lines 428--429
+Overfull \hbox (5.51248pt too wide) in paragraph at lines 435--436
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[16]
-Overfull \hbox (58.9758pt too wide) in paragraph at lines 464--465
+[17] [18]
+Overfull \hbox (58.9758pt too wide) in paragraph at lines 491--492
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 475.
-[17]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 475.
+
+Underfull \hbox (badness 10000) in paragraph at lines 499--500
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--502
+
+ []
+
+[19]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 525.
+ [20]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 525.
  (GuidaJavaConsole.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 475.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 475.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 525.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 525.
 Package rerunfilecheck Info: File `GuidaJavaConsole.out' has not changed.
-(rerunfilecheck)             Checksum: FBA0B1C730C604EF7AA7628839B66A6B;1199.
+(rerunfilecheck)             Checksum: 6DD593F4ACF0558F109F90E4540A737A;1617.
  ) 
 Here is how much of TeX's memory you used:
- 9953 strings out of 493323
- 139730 string characters out of 3139057
- 273473 words of memory out of 3000000
- 13005 multiletter control sequences out of 15000+200000
- 56088 words of font info for 52 fonts, out of 3000000 for 9000
+ 10004 strings out of 493323
+ 140356 string characters out of 3139057
+ 272473 words of memory out of 3000000
+ 13022 multiletter control sequences out of 15000+200000
+ 68749 words of font info for 59 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 35i,6n,72p,897b,1799s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 35i,8n,72p,897b,1803s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
 iKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}<C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
-r12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb
->
-Output written on GuidaJavaConsole.pdf (17 pages, 276143 bytes).
+r10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/lm/lmtt12.pfb>
+Output written on GuidaJavaConsole.pdf (20 pages, 361020 bytes).
 PDF statistics:
- 545 PDF objects out of 1000 (max. 8388607)
- 304 named destinations out of 1000 (max. 500000)
- 179 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 627 PDF objects out of 1000 (max. 8388607)
+ 332 named destinations out of 1000 (max. 500000)
+ 227 words of extra memory for PDF output out of 10000 (max. 10000000)
 
