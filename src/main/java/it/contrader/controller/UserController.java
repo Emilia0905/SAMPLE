@@ -2,11 +2,16 @@ package it.contrader.controller;
 
 import java.util.List;
 
-
+import it.contrader.dto.UserDTO;
 import it.contrader.main.MainDispatcher;
-import it.contrader.model.User;
 import it.contrader.service.UserService;
 
+/**
+ * 
+ * @author Vittorio
+ *
+ *Si osservi che nel Controller compaiono solo oggetti del DTO e non del Model!
+ */
 public class UserController implements Controller {
 
 	/**
@@ -51,8 +56,8 @@ public class UserController implements Controller {
 		// Arriva qui dalla UserReadView. Invoca il Service con il parametro id e invia alla UserReadView uno user da mostrare 
 		case "READ":
 			id = Integer.parseInt(request.get("id").toString());
-			User user = userService.read(id);
-			request.put("user", user);
+			UserDTO userDTO = userService.read(id);
+			request.put("user", userDTO);
 			MainDispatcher.getInstance().callView(sub_package + "UserRead", request);
 			break;
 		
@@ -63,7 +68,7 @@ public class UserController implements Controller {
 			usertype = request.get("usertype").toString();
 			
 			//costruisce l'oggetto user da inserire
-			User usertoinsert = new User(username, password, usertype);
+			UserDTO usertoinsert = new UserDTO(username, password, usertype);
 			//invoca il service
 			userService.insert(usertoinsert);
 			request = new Request();
@@ -88,7 +93,7 @@ public class UserController implements Controller {
 			username = request.get("username").toString();
 			password = request.get("password").toString();
 			usertype = request.get("usertype").toString();
-			User usertoupdate = new User(username, password, usertype);
+			UserDTO usertoupdate = new UserDTO(username, password, usertype);
 			usertoupdate.setId(id);
 			userService.update(usertoupdate);
 			request = new Request();
@@ -98,9 +103,9 @@ public class UserController implements Controller {
 			
 		//Arriva qui dalla UserView Invoca il Service e invia alla UserView il risultato da mostrare 
 		case "USERLIST":
-			List<User> users = userService.getAll();
+			List<UserDTO> usersDTO = userService.getAll();
 			//Impacchetta la request con la lista degi user
-			request.put("users", users);
+			request.put("users", usersDTO);
 			MainDispatcher.getInstance().callView("User", request);
 			break;
 			

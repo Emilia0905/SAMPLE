@@ -2,9 +2,16 @@ package it.contrader.view;
 
 import java.util.List;
 import it.contrader.controller.Request;
+import it.contrader.dto.UserDTO;
 import it.contrader.main.MainDispatcher;
 import it.contrader.model.User;
 
+/**
+ * 
+ * @author Vittorio
+ *
+ *Si osservi che alla View arrivano solo oggetti di tipo DTO!
+ */
 public class UserView extends AbstractView {
 
 	private Request request;
@@ -25,8 +32,8 @@ public class UserView extends AbstractView {
 			System.out.println("----------------------------------------------------\n");
 			
 			@SuppressWarnings("unchecked")
-			List<User> users = (List<User>) request.get("users");
-			for (User u: users)
+			List<UserDTO> users = (List<UserDTO>) request.get("users");
+			for (UserDTO u: users)
 				System.out.println(u);
 			System.out.println();
 		}

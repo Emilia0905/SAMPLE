@@ -1,11 +1,17 @@
 package it.contrader.view.user;
 
 import it.contrader.controller.Request;
-import it.contrader.controller.UserController;
+
+import it.contrader.dto.UserDTO;
 import it.contrader.main.MainDispatcher;
-import it.contrader.model.User;
 import it.contrader.view.AbstractView;
 
+/**
+ * 
+ * @author Vittorio
+ *
+ *Si osservi che alla View arrivano solo oggetti di tipo DTO!
+ */
 public class UserReadView extends AbstractView {
 
 	private int id;
@@ -26,7 +32,7 @@ public class UserReadView extends AbstractView {
 	@Override
 	public void showResults(Request request) {
 		if (request != null) {
-			User user = (User) request.get("user");
+			UserDTO user = (UserDTO) request.get("user");
 			System.out.println(user);
 			MainDispatcher.getInstance().callView("User", null);
 		}

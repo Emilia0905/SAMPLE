@@ -10,15 +10,15 @@ public class HomeUserView extends AbstractView{
 
 	@Override
 	public void showResults(Request request) {
-		System.out.println("/n-----Purtroppo in questo sample l'utente non puà fare nulla, ci scusiamo per il disagio.-----");
+		System.out.println("\n-----Purtroppo in questo sample l'utente non puà fare nulla, ci scusiamo per il disagio.-----");
 
 	}
 
 	@Override
 	public void showOptions() {
 		System.out.println("-------------MENU------------\n");
-		System.out.println("[U]tenti  [E]sci");
-		System.out.println("/n Esatto, puoi solo uscire...");
+		System.out.println("NESSUNA OPZIONE DISPONIBILE!");
+		System.out.println("\n Esatto, puoi solo uscire...");
 		choice = this.getInput();
 
 	}
