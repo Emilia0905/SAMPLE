@@ -3,30 +3,31 @@ package it.contrader.servlets;
 import java.util.List;
 
 
+
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import it.contrader.dto.UserDTO;
-import it.contrader.service.ServiceDTO;
-import it.contrader.service.UserServiceDTO;
+import it.contrader.service.Service;
+import it.contrader.service.UserService;
 
-public class UserManagerServlet extends HttpServlet {
+public class UserServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public UserManagerServlet() {
+	public UserServlet() {
 	}
 	
 	public void updateList(HttpServletRequest request) {
-		ServiceDTO<UserDTO> service = new UserServiceDTO();
+		Service<UserDTO> service = new UserService();
 		List<UserDTO>listDTO = service.getAll();
 		request.setAttribute("list", listDTO);
 	}
 
 	@Override
 	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		ServiceDTO<UserDTO> service = new UserServiceDTO();
+		Service<UserDTO> service = new UserService();
 		String mode = request.getParameter("mode");
 		UserDTO dto;
 		int id;
@@ -43,7 +44,14 @@ public class UserManagerServlet extends HttpServlet {
 			id = Integer.parseInt(request.getParameter("id"));
 			dto = service.read(id);
 			request.setAttribute("dto", dto);
-			getServletContext().getRequestDispatcher("/user/readuser.jsp").forward(request, response);
+			
+			if (request.getParameter("update") == null) {
+				 getServletContext().getRequestDispatcher("/user/readuser.jsp").forward(request, response);
+				
+			}
+			
+			else getServletContext().getRequestDispatcher("/user/updateuser.jsp").forward(request, response);
+			
 			break;
 
 		case "INSERT":
@@ -77,8 +85,7 @@ public class UserManagerServlet extends HttpServlet {
 
 		case "DELETE":
 			id = Integer.parseInt(request.getParameter("id"));
-			dto = service.read(id);
-			ans = service.delete(dto);
+			ans = service.delete(id);
 			request.setAttribute("ans", ans);
 			updateList(request);
 			getServletContext().getRequestDispatcher("/user/usermanager.jsp").forward(request, response);

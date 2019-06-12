@@ -24,12 +24,12 @@
   </session-config>
   <servlet>
     <description></description>
-    <display-name>UserManagerServlet</display-name>
-    <servlet-name>UserManagerServlet</servlet-name>
-    <servlet-class>it.contrader.servlets.UserManagerServlet</servlet-class>
+    <display-name>UserServlet</display-name>
+    <servlet-name>UserServlet</servlet-name>
+    <servlet-class>it.contrader.servlets.UserServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>UserManagerServlet</servlet-name>
-    <url-pattern>/UserManagerServlet</url-pattern>
+    <servlet-name>UserServlet</servlet-name>
+    <url-pattern>/UserServlet</url-pattern>
   </servlet-mapping>
 </web-app>

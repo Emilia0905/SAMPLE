@@ -13,8 +13,7 @@
 
 <div class="navbar">
   <a  href="homeadmin.jsp">Home</a>
-  <a class="active" href="UserManagerServlet?mode=userlist">Users</a>
-  <a href="BuildingManagerServlet?mode=buildinglist">Buildings</a>
+  <a class="active" href="UserServlet?mode=userlist">Users</a>
   <a href="LogoutServlet" id="logout">Logout</a>
 </div>
 <div class="main">
@@ -36,14 +35,14 @@
 			for (UserDTO u : list) {
 		%>
 		<tr>
-			<td><a href=UserManagerServlet?mode=read&id=<%=u.getId()%>>
+			<td><a href=UserServlet?mode=read&id=<%=u.getId()%>>
 					<%=u.getUsername()%>
 			</a></td>
 			<td><%=u.getPassword()%></td>
 			<td><%=u.getUsertype()%></td>
-			<td><a href=UserManagerServlet?mode=readtoupdate&id=<%=u.getId()%>>Edit</a>
+			<td><a href=UserServlet?mode=read&update=true&id=<%=u.getId()%>>Edit</a>
 			</td>
-			<td><a href=UserManagerServlet?mode=delete&id=<%=u.getId()%>>Delete</a>
+			<td><a href=UserServlet?mode=delete&id=<%=u.getId()%>>Delete</a>
 			</td>
 
 		</tr>
@@ -54,7 +53,7 @@
 
 
 
-<form id="floatright" action="UserManagerServlet?mode=insert" method="post">
+<form id="floatright" action="UserServlet?mode=insert" method="post">
   <div class="row">
     <div class="col-25">
       <label for="user">Username</label>
@@ -77,9 +76,9 @@
     </div>
    		 <div class="col-75">
  			<select id="type" name="usertype">
-  				<option value="admin">admin</option>
-  				<option value="operatore">operator</option>
-  				<option value="client">client</option>
+  				<option value="ADMIN">ADMIN</option>
+  				<option value="USER">USER</option>
+ 
 			</select>
     	</div>
   </div>

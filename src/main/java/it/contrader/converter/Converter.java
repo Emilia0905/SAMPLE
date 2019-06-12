@@ -1,9 +1,12 @@
 package it.contrader.converter;
 
-// T = entity, V = DTO
-public interface Converter<T,V> {
+import java.util.List;
 
-	public T toEntity(V v);
+public interface Converter<Entity, DTO> {
+
+	public DTO toDTO(Entity entity);
 	
-	public V toDTO(T t);
+	public Entity toEntity(DTO dto);
+	
+	public List<DTO> toDTOList(List<Entity> entityList);
 }

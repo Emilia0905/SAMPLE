@@ -1,21 +1,25 @@
 package it.contrader.model;
-
-import java.util.*;
-
+/**
+ * Per dettagli vedi guida sez 4 Model
+ */
 public class User {
-	protected int id;
 
-	protected String usertype;
-	protected String nome;
-	protected String cognome;
-	protected String username;
-	protected String password;
-	protected Date birthdate;
-	protected String telnumber;
-	
-	
+	/**
+	 * Qui sotto definisco gli attributi di User. 
+	 */
+	private int id;
 
+	private String username;
+	
+	private String password;
+	
+	private String usertype;
+
+	/**
+	 * Definisco i due costruttori, uno vuoto e uno con tre parametri per costrire oggetti di tipo User
+	 */
 	public User() {
+		
 	}
 
 	public User (String username, String password, String usertype) {
@@ -23,23 +27,26 @@ public class User {
 		this.password = password;
 		this.usertype = usertype;
 	}
-	
+
 	public User (int id, String username, String password, String usertype) {
+		this.id = id;
 		this.username = username;
 		this.password = password;
 		this.usertype = usertype;
+	}
+
+	/**
+	 * Getter e Setter: servono alle altre classi a recuperare e modificare gli attributi di User
+	 */
+	public int getId() {
+		return this.id;
+	}
+	public void setId(int id) {
 		this.id = id;
 	}
 
-	public int getId() {
-		return id;
-	}
-	public void setId(int userId) {
-		this.id = userId;
-	}
-
 	public String getUsertype() {
-		return usertype;
+		return this.usertype;
 	}
 
 	public void setUsertype(String usertype) {
@@ -48,7 +55,7 @@ public class User {
 
 
 	public String getPassword() {
-		return password;
+		return this.password;
 	}
 
 	public void setPassword(String password) {
@@ -63,43 +70,14 @@ public class User {
 		return username;
 	}
 
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public String getCognome() {
-		return cognome;
-	}
-
-	public void setCognome(String cognome) {
-		this.cognome = cognome;
-	}
-
-	public Date getBirthdate() {
-		return birthdate;
-	}
-
-	public void setBirthdate(Date birthdate) {
-		this.birthdate = birthdate;
-	}
-
-	public String getTelnumber() {
-		return telnumber;
-	}
-
-	public void setTelnumber(String telnumber) {
-		this.telnumber = telnumber;
-	}
-
+	//Trasforma un oggetto in una stringa
 	@Override
 	public String toString() {
 		return  id + "\t"  + username +"\t\t" +   password + "\t\t" + usertype;
 	}
 
+	//Metodo per il confronto degli oggetti
+	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
@@ -108,42 +86,23 @@ public class User {
 		if (getClass() != obj.getClass())
 			return false;
 		User other = (User) obj;
-		if (birthdate == null) {
-			if (other.birthdate != null)
-				return false;
-		} else if (!birthdate.equals(other.birthdate))
-			return false;
-		if (cognome == null) {
-			if (other.cognome != null)
-				return false;
-		} else if (!cognome.equals(other.cognome))
-			return false;
-		if (nome == null) {
-			if (other.nome != null)
-				return false;
-		} else if (!nome.equals(other.nome))
+		if (id != other.id)
 			return false;
 		if (password == null) {
 			if (other.password != null)
 				return false;
 		} else if (!password.equals(other.password))
 			return false;
-		if (telnumber == null) {
-			if (other.telnumber != null)
-				return false;
-		} else if (!telnumber.equals(other.telnumber))
-			return false;
-		if (id != other.id)
-			return false;
 		if (username == null) {
 			if (other.username != null)
 				return false;
 		} else if (!username.equals(other.username))
 			return false;
+		if (usertype == null) {
+			if (other.usertype != null)
+				return false;
+		} else if (!usertype.equals(other.usertype))
+			return false;
 		return true;
 	}
-
-
-
-
 }

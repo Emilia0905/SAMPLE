@@ -11,8 +11,7 @@
 <%@ include file="../css/header.jsp" %>
 <div class="navbar">
   <a href="homeadmin.jsp">Home</a>
-  <a class="active" href="UserManagerServlet?mode=userlist">Users</a>
-  <a href="BuildingManagerServlet?mode=buildinglist">Buildings</a>
+  <a class="active" href="UserServlet?mode=userlist">Users</a>
   <a href="LogoutServlet" id="logout">Logout</a>
 </div>
 <br>
@@ -21,7 +20,7 @@
 <%UserDTO u = (UserDTO) request.getAttribute("dto");%>
 
 
-<form id="floatleft" action="UserManagerServlet?mode=update&id=<%=u.getId()%>" method="post">
+<form id="floatleft" action="UserServlet?mode=update&id=<%=u.getId()%>" method="post">
   <div class="row">
     <div class="col-25">
       <label for="user">Username</label>
@@ -45,9 +44,8 @@
     </div>
    		 <div class="col-75">
  			<select id="type" name="usertype">
-  				<option value="admin" <%if(u.getUsertype().equals("admin")) {%>selected<%}%>>admin</option>
-  				<option value="operatore" <%if(u.getUsertype().equals("operatore")) {%>selected<%}%>>operator</option>
-  				<option value="client" <%if(u.getUsertype().equals("client")) {%>selected<%}%>>client</option>
+  				<option value="ADMIN" <%if(u.getUsertype().equals("ADMIN")) {%>selected<%}%>>ADMIN</option>
+  				<option value="USER" <%if(u.getUsertype().equals("USER")) {%>selected<%}%>>USER</option>
 			</select>
     	</div>
   </div>

@@ -3,10 +3,9 @@
 <head>
 <link href="css/vittoriostyle.css" rel="stylesheet">
 
-<title>Login DoSer</title>
+<title>Login SAMPLE</title>
 </head>
 <body>
-<img class="log"alt="Logo" src="css/DoserLogo.svg">	
 
 		<form class="login" action="LoginServlet" method="post">
 
