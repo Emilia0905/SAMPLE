@@ -25,7 +25,7 @@ public class UserController implements Controller {
 	
 	
 	/**
-	 * Metodo dell'interfaccai Controller. Estrae dalla request la mode
+	 * Metodo dell'interfaccia Controller. Estrae dalla request la mode
 	 * (che riceve dalle view specifiche e può essere la richesta di una 
 	 * scelta da parte dell'utente "GETCHOICE") e la scelta dell'utente.
 	 * 
@@ -88,7 +88,9 @@ public class UserController implements Controller {
 			username = request.get("username").toString();
 			password = request.get("password").toString();
 			usertype = request.get("usertype").toString();
-			userService.update(id, username, password, usertype);
+			User usertoupdate = new User(username, password, usertype);
+			usertoupdate.setId(id);
+			userService.update(usertoupdate);
 			request = new Request();
 			request.put("mode", "mode");
 			MainDispatcher.getInstance().callView(sub_package + "UserUpdate", request);

@@ -1,7 +1,12 @@
 package it.contrader.model;
-
+/**
+ * Per dettagli vedi guida sez 4 Model
+ */
 public class User {
 
+	/**
+	 * Qui sotto definisco gli attributi di User. 
+	 */
 	private int id;
 
 	private String username;
@@ -10,7 +15,9 @@ public class User {
 	
 	private String usertype;
 
-
+	/**
+	 * Definisco i due costruttori, uno vuoto e uno con tre parametri per costrire oggetti di tipo User
+	 */
 	public User() {
 		
 	}
@@ -21,6 +28,9 @@ public class User {
 		this.usertype = usertype;
 	}
 
+	/**
+	 * Getter e Setter: servono alle altre classi a recuperare e modificare gli attributi di User
+	 */
 	public int getId() {
 		return this.id;
 	}
@@ -53,12 +63,13 @@ public class User {
 		return username;
 	}
 
-	
+	//Trasforma un oggetto in una stringa
 	@Override
 	public String toString() {
 		return  id + "\t"  + username +"\t\t" +   password + "\t\t" + usertype;
 	}
 
+	//Metodo per il confronto degli oggetti
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
