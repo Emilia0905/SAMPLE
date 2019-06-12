@@ -25,9 +25,8 @@ public class UserService {
 		return userDAO.delete(userId);
 	}
 
-	public boolean insert(String username, String password, String usertype) {
-		User newUser = new User(username, password, usertype);
-		return userDAO.insert(newUser);
+	public boolean insert(User user) {
+		return userDAO.insert(user);
 	}
 
 	public boolean update(int id, String username, String password, String usertype) {
