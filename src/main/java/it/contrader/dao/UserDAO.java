@@ -6,6 +6,12 @@ import java.util.List;
 import it.contrader.main.ConnectionSingleton;
 import it.contrader.model.User;
 
+/**
+ * 
+ * @author Vittorio
+ *
+ *Per i dettagli della classe vedi Guida sez 6: DAO
+ */
 public class UserDAO implements DAO<User> {
 
 	private final String QUERY_ALL = "SELECT * FROM user";
