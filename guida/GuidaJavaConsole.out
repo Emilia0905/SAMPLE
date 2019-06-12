@@ -12,7 +12,10 @@
 \BOOKMARK [2][-]{subsection.5.3}{Getter e Setter}{section.5}% 12
 \BOOKMARK [2][-]{subsection.5.4}{ToString e Equals}{section.5}% 13
 \BOOKMARK [1][-]{section.6}{DAO}{}% 14
-\BOOKMARK [1][-]{section.7}{Service}{}% 15
-\BOOKMARK [1][-]{section.8}{Controller}{}% 16
-\BOOKMARK [1][-]{section.9}{View}{}% 17
-\BOOKMARK [1][-]{section.10}{Pattern Singleton}{}% 18
+\BOOKMARK [2][-]{subsection.6.1}{Definizione della Query}{section.6}% 15
+\BOOKMARK [2][-]{subsection.6.2}{Connessione al DB}{section.6}% 16
+\BOOKMARK [2][-]{subsection.6.3}{Esecuzione della Query}{section.6}% 17
+\BOOKMARK [1][-]{section.7}{Service}{}% 18
+\BOOKMARK [1][-]{section.8}{Controller}{}% 19
+\BOOKMARK [1][-]{section.9}{View}{}% 20
+\BOOKMARK [1][-]{section.10}{Pattern Singleton}{}% 21

@@ -7,6 +7,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import it.contrader.main.ConnectionSingleton;
 
+/**
+ * 
+ * @author Vittorio
+ *
+ *Per i dettagli della classe vedi Guida sez 6: DAO
+ */
 public class LoginDAO {
 
 	private final String QUERY_LOGIN = "SELECT * FROM user WHERE username = ? AND password = ?";
