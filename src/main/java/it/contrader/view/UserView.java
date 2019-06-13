@@ -11,7 +11,7 @@ import it.contrader.main.MainDispatcher;
  * 
  * @author Vittorio
  *
- *Si osservi che alla View arrivano solo oggetti di tipo DTO!
+ * Si osservi che alla View arrivano solo oggetti di tipo DTO!
  */
 public class UserView extends AbstractView {
 
