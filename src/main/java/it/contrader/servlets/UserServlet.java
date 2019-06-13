@@ -13,6 +13,9 @@ import it.contrader.dto.UserDTO;
 import it.contrader.service.Service;
 import it.contrader.service.UserService;
 
+/*
+ * Per dettagli vedi Guida sez Servlet
+ */
 public class UserServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -63,13 +66,6 @@ public class UserServlet extends HttpServlet {
 			request.setAttribute("ans", ans);
 			updateList(request);
 			getServletContext().getRequestDispatcher("/user/usermanager.jsp").forward(request, response);
-			break;
-
-		case "READTOUPDATE":
-			id = Integer.parseInt(request.getParameter("id"));
-			dto = service.read(id);
-			request.setAttribute("dto", dto);
-			getServletContext().getRequestDispatcher("/user/updateuser.jsp").forward(request, response);
 			break;
 			
 		case "UPDATE":
