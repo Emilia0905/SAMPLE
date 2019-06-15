@@ -5,7 +5,7 @@ import { LoginComponent } from './login.component';
 /**
  * Routing del LoginModule. gestisce il routing per le pagine di login 
  * (ed eventualmente di registrazione). Come ogni modulo di routing, viene 
- * importato nel suo modulo
+ * importato nel suo modulo.
  * 
  * @see LoginModule
  * 
