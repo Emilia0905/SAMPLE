@@ -13,24 +13,31 @@ public class UserDeleteView extends AbstractView {
 	public UserDeleteView() {
 	}
 
+	/**
+	 * Se la request non è nulla (ovvero se si arriva dalla mode DELETE del controller) mostra
+	 * l'esito dell'operazione
+	 */
 	@Override
 	public void showResults(Request request) {
 		if (request!=null) {
-			System.out.println("La cancellazione Ã¨ andata a buon fine.\n");
+			System.out.println("Cancellazione andata a buon fine.\n");
 			MainDispatcher.getInstance().callView("User", null);
 		}
 	}
 
+	/**
+	 * Chiede all'utente di inserire l'id dell'utente da cancellare
+	 */
 	@Override
 	public void showOptions() {
-		try {
 			System.out.println("Inserisci id dell'utente:");
 			id = Integer.parseInt(getInput());
-		} catch (Exception e) {
 
-		}
 	}
 
+	/**
+	 * impacchetta la request con l'id dell'utente da cancellare
+	 */
 	@Override
 	public void submit() {
 		request = new Request();

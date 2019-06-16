@@ -14,29 +14,35 @@ public class UserInsertView extends AbstractView{
 
 	public UserInsertView() {
 	}
-
+	
+	/**
+	 * Se la request non è nulla (ovvero se si arriva dalla mode INSERT del controller) mostra
+	 * l'esito dell'operazione
+	 */
 	@Override
 	public void showResults(Request request) {
 		if (request!=null) {
-			System.out.println("L'inserimento Ã¨ andato a buon fine.\n");
+			System.out.println("Inserimento andato a buon fine.\n");
 			MainDispatcher.getInstance().callView("User", null);
 		}
 	}
 
+	/**
+	 * Chiede all'utente di inserire gli attributi dell'utente da inserire
+	 */
 	@Override
 	public void showOptions() {
-		try {
 			System.out.println("Inserisci username dell'utente:");
 			username = getInput();
 			System.out.println("Inserisci password dell'utente:");
 			password = getInput();
 			System.out.println("Inserisci tipo dell'utente:");
 			usertype = getInput();
-		} catch (Exception e) {
-
-		}
 	}
 
+	/**
+	 * Impacchetta la request con i dati inseriti nel metodo showOption()
+	 */
 	@Override
 	public void submit() {
 		request = new Request();

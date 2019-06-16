@@ -12,6 +12,13 @@ import it.contrader.main.ConnectionSingleton;
 * In questo caso LoginDAO conterra al suo interno la definizione delle query per il login
 * e la loro gestione
 */
+
+/**
+ * 
+ * @author Vittorio
+ *
+ *Per i dettagli della classe vedi Guida sez 6: DAO
+ */
 public class LoginDAO {
 	/*
 		SEZIONE 11 per vedere SQL (work in progress)
