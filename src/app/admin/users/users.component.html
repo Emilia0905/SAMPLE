@@ -1,9 +1,7 @@
 <div class="container">
   <div class="row mt-5">
-    <div class="col-md-1">
 
-    </div>
-    <div class="col-md-10">
+    <div class="col-md-12">
       <table>
         <tr>
           <th>
@@ -19,53 +17,71 @@
             Edit
           </th>
           <th>
-            User
+            Delete
+          </th>
+          <th>
+            Details
           </th>
         </tr>
         <tr>
           <td>
-            <input placeholder="username" [(ngModel)]="usertoinsert.username">
+            <input placeholder="username" [(ngModel)]="dto.username">
           </td>
           <td>
-            <input placeholder="password" [(ngModel)]="usertoinsert.password">
+            <input placeholder="password" [(ngModel)]="dto.password">
           </td>
           <td>
-            <select placeholder="usertype" [(ngModel)]="usertoinsert.usertype">
+            <select placeholder="usertype" [(ngModel)]="dto.usertype">
               <option value="ADMIN">ADMIN</option>
               <option value="USER">USER</option>
             </select>
           </td>
           <td>
-            <button (click)="insert(usertoinsert)">Insert</button>
+            <button (click)="insert(dto)"><i class="fas fa-plus"></i>Insert</button>
           </td>
           <td>
-            <button (click)="clear()">Clear</button>
+            <button (click)="clear()"><i class="fas fa-times"></i>Clear</button>
+          </td>
+          <td>
+              <button (click)="close()">Close Details</button>
           </td>
         </tr>
-        <tr *ngFor="let user of users">
+        <tr *ngFor="let dto of dtolist">
           <td>
-            <input [(ngModel)]="user.username">
+            <input [(ngModel)]="dto.username">
           </td>
           <td>
-            <input [(ngModel)]="user.password">
+            <input [(ngModel)]="dto.password">
           </td>
           <td>
-            <select [(ngModel)]="user.usertype">
-              <option [selected]="user.usertype===ADMIN" value="ADMIN">ADMIN</option>
-              <option [selected]="user.usertype===USER" value="USER">USER</option>
+            <select [(ngModel)]="dto.usertype">
+              <option [selected]="dto.usertype===ADMIN" value="ADMIN">ADMIN</option>
+              <option [selected]="dto.usertype===USER" value="USER">USER</option>
             </select>
           </td>
           <td>
-            <button (click)=update(user)>Save</button>
+            <button (click)=update(dto)><i class="fas fa-edit"></i>Edit</button>
           </td>
           <td>
-            <button (click)="delete(user)">Delete</button>
+            <button (click)="delete(dto.id)"><i class="fas fa-trash"></i>Delete</button>
           </td>
+          <td>
+              <button (click)="select(dto)"><i class="fas fa-binoculars"></i>Details</button>
+            </td>
         </tr>
       </table>
     </div>
-    <div class="col-md-1">
 
-    </div>
   </div>
+    <div class="row mt-5">
+      <div class="col-md-1">
+        
+      </div>
+      <div class="col-md-10">
+          <app-user-details *ngIf="selected" [dto]="selected" ></app-user-details>
+      </div>
+      <div class="col-md-1">
+
+      </div>
+    </div>
 </div>

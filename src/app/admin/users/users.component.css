@@ -2,6 +2,7 @@
     text-align: center;
 }
 
+
 /*Tables*/
 table {
 	border-collapse: collapse;
@@ -39,10 +40,18 @@ input, select{
     font-size: inherit;
 }
 
+button {
+width: 120px;
+}
+
 input:hover,  input:active, input:focus{
     border: 2px solid crimson;
 }
 
 button:hover{
     background-color: crimson;
+}
+
+i{
+	margin-right: 10px;
 }
