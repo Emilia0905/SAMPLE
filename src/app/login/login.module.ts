@@ -18,6 +18,6 @@ import { FormsModule } from '@angular/forms';
     LoginRoutingModule,
     FormsModule
   ]
-  
+
 })
 export class LoginModule { }

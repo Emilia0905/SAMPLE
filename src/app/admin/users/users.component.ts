@@ -19,7 +19,7 @@ import { AbstractCrudComponent } from 'src/app/utils/abstractcomponent';
 })
 export class UsersComponent extends AbstractCrudComponent<UserDTO> implements OnInit {
 
-  constructor(service: UserService) { 
+  constructor(service: UserService) {
     super(service);
   }
 
@@ -28,11 +28,11 @@ export class UsersComponent extends AbstractCrudComponent<UserDTO> implements On
     this.getAll();
   }
 
-  clear(){
+  clear() {
     this.dto = new UserDTO();
   }
 
-  close(){
+  close() {
     this.selected = null;
   }
 }
