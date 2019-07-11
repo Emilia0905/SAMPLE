@@ -21,7 +21,13 @@ public class UserConverter  implements Converter<User, UserDTO> {
 	 */
 	@Override
 	public UserDTO toDTO(User user) {
-		UserDTO userDTO = new UserDTO(user.getId(), user.getUsername(), user.getPassword(), user.getUsertype());
+		UserDTO userDTO = new UserDTO();
+		if (user != null) {
+			userDTO.setId(user.getId());
+			userDTO.setUsername(user.getUsername());
+			userDTO.setPassword(user.getPassword());
+			userDTO.setUsertype(user.getUsertype());
+		}
 		return userDTO;
 	}
 
@@ -31,9 +37,16 @@ public class UserConverter  implements Converter<User, UserDTO> {
 	 */
 	@Override
 	public User toEntity(UserDTO userDTO) {
-		User user = new User(userDTO.getId(), userDTO.getUsername(), userDTO.getPassword(), userDTO.getUsertype());
+		User user = new User();
+		if (userDTO != null) {
+			user.setId(userDTO.getId());
+			user.setUsername(userDTO.getUsername());
+			user.setPassword(userDTO.getPassword());
+			user.setUsertype(userDTO.getUsertype());
+		}
 		return user;
 	}
+
 	
 	/**
 	 * Metodo per convertire le liste di User.
