@@ -1,5 +1,6 @@
 import { AbstractService } from 'src/service/abstractservice';
 
+
 /**
  * Questa classe deinisce tutti i metodi di CRUD da usare nelle varie componenti (se lo richiedono).
  * Si osservi come, invece degli oggetti specifici, si fa riferimento a dto e dtolist.
