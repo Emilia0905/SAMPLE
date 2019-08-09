@@ -6,7 +6,8 @@ import java.util.List;
 /**
  * Questa classe implementa i metodi che convertono le liste.
  *
- * @author Vittorio Valent & Girolamo Murdaca
+ * @author Vittorio Valent
+ * @author Girolamo Murdaca
  *
  * @param <Entity>
  * @param <DTO>

@@ -7,9 +7,11 @@ import it.contrader.dto.UserDTO;
 import it.contrader.model.User;
 
 /**
- * Questa classe implementa i metodi di conversione dell'entità User.
+ * Questa classe implementa i metodi di conversione dell'entità {@link User} a {@link UserDTO}
+ * e viceversa.
  *  
- * @author Vittorio Valent & Girolamo Murdaca
+ * @author Vittorio Valent
+ * @author Girolamo Murdaca
  * 
  *@see AbstractConverter
  *@see Converter

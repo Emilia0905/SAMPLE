@@ -8,9 +8,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * DTO della classe User. Ha gli stessi attributi di User
+ * DTO della classe {@link User}. Ha gli stessi attributi di User
  * 
- * @author Vittorio Valent & Girolamo Murdaca
+ * @author Vittorio Valent
+ * @author Girolamo Murdaca
  * 
  *@see User
  */

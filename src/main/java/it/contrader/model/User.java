@@ -16,7 +16,8 @@ import lombok.NoArgsConstructor;
  * Model dell'entità User. Contiene l'enum che definisce gli usertype (salvati come interi
  * a partire da 0 sul db).
  * 
- * @author Vittorio Valent & Girolamo Murdaca
+ * @author Vittorio Valent
+ * @author Girolamo Murdaca
  * 
  * @see UserDTO
  */

@@ -2,13 +2,14 @@ package it.contrader.service;
 
 /**
  * Questa interfaccia firma i metodi dei Service. Osservare che, a differenza di
- * AbstactService, dipende solo dal parametro DTO.
+ * {@link AbstractService}, dipende solo dal parametro DTO.
  * 
- * @author Vittorio Valent & Girolamo Murdaca
+ * @author Vittorio Valent
+ * @author Girolamo Murdaca
  *
  * @param <DTO>
  * 
- * @see AbstractService.
+ * @see AbstractService
  */
 public interface ServiceDTO<DTO> {
 	

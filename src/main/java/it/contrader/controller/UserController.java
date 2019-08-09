@@ -14,10 +14,11 @@ import it.contrader.service.UserService;
 
 /**
  * 
- * Questa classe estende AbstractController con tipo UserDTO.
- * In aggiunta ai metodi di CRUD si implementa il metodo di login.
+ * Questa classe estende AbstractController con tipo {@link UserDTO}.
+ * In aggiunta ai metodi di CRUD si implementa il metodo di  login.
  * 
- * @author Vittorio Valent & Girolamo Murdaca
+ * @author Vittorio Valent
+ * @author Girolamo Murdaca
  * 
  * @param<UserDTO>
  * 
@@ -33,7 +34,13 @@ public class UserController extends AbstractController<UserDTO>{
 	private UserService userService;
 
 
-	//POST Angular a UserDTO
+	/**
+	 * Riceve una request di tipo POST dal server Angular
+	 * con un {@link LoginDTO} nel Body.
+	 * 
+	 * @param loginDTO
+	 * @return UserDTO
+	 */
 	@PostMapping(value = "/login")
 	public UserDTO login( @RequestBody LoginDTO loginDTO ) {
 		return userService.findByUsernameAndPassword(loginDTO.getUsername(), loginDTO.getPassword());

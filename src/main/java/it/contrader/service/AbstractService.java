@@ -8,11 +8,12 @@ import it.contrader.converter.Converter;
 
 
 /**
- * Questa classe astratta implementa tutti i metodi CRUD firmati in ServiceDTO.
+ * Questa classe astratta implementa tutti i metodi CRUD firmati in {@link ServiceDTO}.
  * Il converter agisce due volte nei metodi  insert e update per avere sia come input che come output
  * un oggetto DTO.
  * 
- * @author Vittorio Valent & Girolamo Murdaca
+ * @author Vittorio Valent
+ * @author Girolamo Murdaca
  *
  * @param <Entity>
  * @param <DTO>
